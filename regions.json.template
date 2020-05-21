@@ -1,0 +1,29 @@
+{
+  "regions": [
+    {
+      "start_x": 0,
+      "start_y": 0,
+      "width": 2068,
+      "height": 2941
+    },
+    {
+      "start_x": 3003,
+      "start_y": 0,
+      "width": 2043,
+      "height": 2954
+    },
+    {
+      "start_x": 3021,
+      "start_y": 3960,
+      "width": 2025,
+      "height": 2980
+    },
+    {
+      "start_x": 0,
+      "start_y": 3970,
+      "width": 2062,
+      "height": 2986
+    }
+  ]
+}
+

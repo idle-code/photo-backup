@@ -16,19 +16,18 @@ def crop(output_dir, regions_config, image_paths):
         region_config = json.load(json_config_file)
     
     regions = region_config["regions"]
-    print(f"{len(regions)} to cut from each image")
- 
-    if not image_paths:
-        raise click.UsageError("No image paths provided")
-    image_paths = list(sorted(image_paths))
-    total_images = len(image_paths)
-    print(f"{total_images} images to cut")
-
+    print(f"{len(regions)} regions to cut from each image")
     for region in regions:
         print("Max width:", region["start_x"] + region["width"])
         print("Max height:", region["start_y"] + region["height"])
         print()
+ 
+    if not image_paths:
+        raise click.UsageError("No image paths provided")
 
+    image_paths = list(sorted(image_paths))
+    total_images = len(image_paths)
+    print(f"{total_images} images to cut")
     for c, image_path in enumerate(image_paths):
         print(f"[{c + 1}/{total_images}] Cutting {image_path}")
         img = Image.open(image_path)
